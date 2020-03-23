@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email_validation_failed">Az email cím nem megfelelő!</string>
+    <string name="password_length_validation_failed">Kis, nagy, speciális karaktert és számot is tartalmazzon!</string>
+    <string name="two_passwords_equals_failed">A két jelszó nem egyezik meg!</string>
+    <string name="not_empty_failed">A mező nem lehet üres</string>
+    <string name="phone_number_format_failed">Formátum: +36XXXXXXXXX</string>
+    <string name="date_format_not_valid">Hibás dátum!</string>
+    <string name="zip_format_failed">Hibás irányítószám!</string>
+    <string name="tax_id_format_failed">Hibás adóazonosító jel!</string>
+    <string name="adults_number_less_than_one">Felnőttek száma nem lehet 0!</string>
+    <string name="active_employer_less_than_one">Aktív keresők száma nem lehet 0!</string>
+    <string name="sms_code_validation_failed">A számokból álló sms kód formátuma: XXX-XXX</string>
+    <string name="empty_text"></string>
+    <string name="email_is_valid">Email formátum megfelelő!</string>
+    <string name="phone_number_is_valid">Telefonszám formátum megfelelő</string>
+    <string name="bank_account_failed">Bankszámlaszám nem megfelelő!</string>
+    <string name="registration_username_exist">Ez a felhasználónév már foglalt!</string>
+</resources>

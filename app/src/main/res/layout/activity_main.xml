@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="hu.familyfinances.example.validatortillasample.LoginViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <hu.familyfinances.example.validatortillasample.view.InputFieldView
+            android:id="@+id/registration_username"
+            style="@style/InputFieldView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:runValidate="@{viewModel.runValidate}"
+            bind:text="@{viewModel.username}"
+            bind:validator="@{viewModel.nameValidator}"
+            custom:feedbackGone="false"
+            custom:hint_label="@string/registration_username"
+            custom:icon="@drawable/ic_person"
+            custom:inputType="textEmailAddress" />
+
+        <hu.familyfinances.example.validatortillasample.view.InputFieldView
+            android:id="@+id/registration_password"
+            style="@style/InputFieldView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registration_username"
+            bind:runValidate="@{viewModel.runValidate}"
+            bind:text="@{viewModel.password}"
+            bind:validator="@{viewModel.passwordValidator}"
+            custom:feedbackGone="false"
+            custom:hint_label="@string/registration_password"
+            custom:icon="@drawable/ic_password_icon"
+            custom:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/registration_register"
+            style="@style/Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/material_button_height"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/registration_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registration_password" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

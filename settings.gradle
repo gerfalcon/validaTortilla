@@ -1,0 +1,3 @@
+rootProject.name='ValidatortillaSample'
+include ':app'
+include ':validatortilla'
